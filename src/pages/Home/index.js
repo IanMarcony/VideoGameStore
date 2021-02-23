@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
+import { Waypoint } from 'react-waypoint';
 
 import GameItem from '../../components/GameItem';
 import { api, API_KEY } from '../../service/api';
@@ -42,22 +43,22 @@ const Home = () => {
       <Title>Top Games</Title>
       <GamesRatingArea>
         {games &&
-          games.map((game) => (
-            <GameItem
-              id={game.id}
-              imgURL={game.background_image}
-              metacritic={game.metacritic}
-              name={game.name}
-              platforms={game.platforms}
-              key={game.id}
-            />
+          games.map((game, i) => (
+            <React.Fragment key={i}>
+              <GameItem
+                id={game.id}
+                imgURL={game.background_image}
+                metacritic={game.metacritic}
+                name={game.name}
+                platforms={game.platforms}
+              />
+              {i == games.length - 2 && (
+                <Waypoint onEnter={() => setPage(page + 1)} />
+              )}
+            </React.Fragment>
           ))}
       </GamesRatingArea>
-      {loading ? (
-        <Title>Loading...</Title>
-      ) : (
-        <LoadMore onClick={() => setPage(page + 1)}>Carregar mais...</LoadMore>
-      )}
+      {loading ? <Title>Loading...</Title> : null}
     </>
   );
 };
