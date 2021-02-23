@@ -22,6 +22,7 @@ export const InformartionArea = styled.div`
   padding: 14px;
 
   h1 {
+    margin-top: 4%;
     font-size: 30pt;
     color: #fff;
     font-weight: 700;
@@ -32,7 +33,7 @@ export const HeadArea = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 `;
 
 export const MetaCritic = styled.div`
@@ -58,13 +59,8 @@ export const MoreInformation = styled.div`
   }
 `;
 export const Platforms = styled.div`
-  img {
-    width: 25px;
-    height: 25px;
-    margin: 4px;
-    color: #fff;
-  }
-  svg {
-    fill: #fff;
-  }
+  max-width: 60%;
+  height: max-content;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 `;

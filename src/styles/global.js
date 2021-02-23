@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
    *{
@@ -19,9 +19,10 @@ export default createGlobalStyle`
   }
 
   #root{
-    max-width:960px;
+    width:100%;
+    height:100%;
     margin:0 auto;
-    padding:40px 20px;
+    padding:30px 20px;
   }
   a{
     text-decoration:none;

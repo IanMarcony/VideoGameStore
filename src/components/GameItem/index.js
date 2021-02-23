@@ -1,15 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { FaPlus } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-// no-unused-vars
-import AndroidIcon from '../../assets/images/android-logo.svg';
-import WebIcon from '../../assets/images/global.svg';
-import IosIcon from '../../assets/images/iphone.svg';
-import MacIcon from '../../assets/images/mac-os-logo.svg';
-import NintendoIcon from '../../assets/images/nintendo.svg';
-import PlaystationIcon from '../../assets/images/playstation-logotype.svg';
-import WindowsIcon from '../../assets/images/windows.svg';
-import XboxIcon from '../../assets/images/xbox-logo.svg';
+
 import {
   Container,
   InformartionArea,
@@ -28,14 +21,11 @@ const GameItem = ({ id, name, imgURL, metacritic, platforms }) => {
           <InformartionArea>
             <HeadArea>
               <Platforms>
-                {platforms &&
-                  platforms.map((item, index) => (
-                    <img
-                      key={index}
-                      src={PlaystationIcon}
-                      alt={item.platform.name}
-                    />
-                  ))}
+                {platforms.map((item, i) =>
+                  i == platforms.length - 1
+                    ? item.platform.name
+                    : item.platform.name + ', ',
+                )}
               </Platforms>
 
               <MetaCritic>Metascore: {metacritic}</MetaCritic>
