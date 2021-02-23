@@ -22,4 +22,9 @@ export const GamesRatingArea = styled.div`
   grid-gap: 10px;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;

@@ -103,6 +103,10 @@ export const InformationAbout = styled.div`
   grid-template-rows: repeat(4, 1fr);
   grid-gap: 10px;
   margin-top: 20px;
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const AreaInfo = styled.div`
