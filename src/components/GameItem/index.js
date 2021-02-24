@@ -22,7 +22,7 @@ const GameItem = ({ id, name, imgURL, metacritic, platforms }) => {
             <HeadArea>
               <Platforms>
                 {platforms.map((item, i) =>
-                  i == platforms.length - 1
+                  i === platforms.length - 1
                     ? item.platform.name
                     : item.platform.name + ', ',
                 )}

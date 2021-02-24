@@ -97,7 +97,7 @@ const Interna = () => {
               <h3>Plataformas</h3>
               <section>
                 {gameBody.platforms.map((item, i) =>
-                  i == gameBody.platforms.length - 1
+                  i === gameBody.platforms.length - 1
                     ? item.platform.name
                     : item.platform.name + ', ',
                 )}
@@ -114,7 +114,7 @@ const Interna = () => {
               <section>
                 {gameBody.genres
                   ? gameBody.genres.map((item, i) =>
-                      i == gameBody.genres.length - 1
+                      i === gameBody.genres.length - 1
                         ? item.name
                         : item.name + ',',
                     )
@@ -130,7 +130,7 @@ const Interna = () => {
               <section>
                 {gameBody.developers
                   ? gameBody.developers.map((item, i) =>
-                      i == gameBody.developers.length - 1
+                      i === gameBody.developers.length - 1
                         ? item.name
                         : item.name + ', ',
                     )

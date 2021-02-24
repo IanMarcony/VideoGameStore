@@ -55,7 +55,7 @@ const Home = () => {
                   name={game.name}
                   platforms={game.platforms}
                 />
-                {i == games.length - 1 && (
+                {i === games.length - 1 && (
                   <Waypoint onEnter={() => setPage(page + 1)} />
                 )}
               </React.Fragment>
